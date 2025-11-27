@@ -1,0 +1,14 @@
+type StoreConfig {
+    is_enabled_medication: Boolean! @doc(description: "Extended Config Data - general/medication/is_enabled")
+    medication_form_label: String! @doc(description: "Extended Config Data - general/medication/is_enabled")
+    medication_questions: String! @doc(description: "Extended Config Data - general/medication/questions")
+}
+input CartItemUpdateInput @doc(description: "A single item to be updated.") {
+    medication_product_data: String @doc(description: "Medication form questions")
+}
+type Mutation {
+    updateCartMedication(
+        input: UpdateCartItemsInput @doc(description: "An input object that defines products to be updated.")
+    ): UpdateCartItemsOutput @resolver(class: "Yuriisha\\MedicationConfig\\Model\\Resolver\\UpdateMedicationItems")
+    @doc(description:"Modify medication data in the cart.")
+}
