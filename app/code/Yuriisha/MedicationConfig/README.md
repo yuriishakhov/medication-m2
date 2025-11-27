@@ -2,4 +2,8 @@
 
 ## Additional information
 
-- Add 'is_medication' attribute to products
+- Added medication config to admin panel
+- Added medication config to graphql query
+- Added dynamic rows for questions
+- Updated 'CartItemUpdateInput'
+- Added 'updateCartMedication' mutation
